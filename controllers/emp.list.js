@@ -4,7 +4,7 @@ const Emp = require('../models/employee')
 const checkToken = (token) => {
     token = token.split(" ")
     console.log({ token })
-    if (token&&token!==null&&token!=='') {
+    if (token&&token!==null) {
      
         const decode = jwt.verify(token[1], process.env.JWT_SECRET);
 
